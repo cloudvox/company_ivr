@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090610192750) do
+ActiveRecord::Schema.define(:version => 20090610211403) do
 
   create_table "messages", :force => true do |t|
     t.string   "filepath",                        :null => false
@@ -32,14 +32,15 @@ ActiveRecord::Schema.define(:version => 20090610192750) do
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
 
   create_table "users", :force => true do |t|
-    t.string   "name",              :null => false
-    t.string   "username",          :null => false
-    t.string   "email",             :null => false
-    t.string   "crypted_password",  :null => false
-    t.string   "password_salt",     :null => false
-    t.string   "persistence_token", :null => false
+    t.string   "name",                             :null => false
+    t.string   "username",                         :null => false
+    t.string   "email",                            :null => false
+    t.string   "crypted_password",                 :null => false
+    t.string   "password_salt",                    :null => false
+    t.string   "persistence_token",                :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "pin",               :default => 0, :null => false
   end
 
 end
