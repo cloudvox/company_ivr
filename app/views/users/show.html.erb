@@ -8,6 +8,12 @@
   <%=h @user.username %>
 </p>
 
+<p>
+  <b>Messages</b><br />
+  <%- @user.messages.each do |message| %>
+  <p><%= message.created_at %></p>
+  <%- end %>
+</p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
