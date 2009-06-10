@@ -3,12 +3,14 @@
     <th>Heard it yet?</th>
     <th>Time</th>
     <th>Name of Caller</th>
+    <th>Phone Number</th>
   </tr>
     <%- messages.each do |message| %>
   <tr>
     <td><%= pretty_boolean message.listened? %></td>
     <td><%=h message.created_at %></td>
     <td><%=h message.name %></td>
+    <td><%=h message.phone_number %></td>
   </tr>
   <%- end %>
 </table>
