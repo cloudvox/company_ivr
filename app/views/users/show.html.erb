@@ -8,12 +8,9 @@
   <%=h @user.username %>
 </p>
 
-<p>
-  <b>Messages</b><br />
-  <%- @user.messages.each do |message| %>
-  <p><%= message.created_at %></p>
-  <%- end %>
-</p>
+<h2>Messages</h2>
+
+<%= render :partial => 'messages/messages', :locals => {:messages => @user.messages} %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
