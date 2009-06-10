@@ -9,13 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090610012805) do
+ActiveRecord::Schema.define(:version => 20090610192750) do
 
   create_table "messages", :force => true do |t|
-    t.string   "filepath",   :null => false
-    t.integer  "user_id",    :null => false
+    t.string   "filepath",                        :null => false
+    t.integer  "user_id",                         :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "phone_number"
+    t.string   "name"
+    t.boolean  "listened",     :default => false
   end
 
   create_table "sessions", :force => true do |t|
