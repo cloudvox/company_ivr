@@ -7,6 +7,17 @@
   <b>Username:</b>
   <%=h @user.username %>
 </p>
+<fieldset>
+  <legend>Needed to Log In From Your Phone</legend>
+  <p>
+    <b>User ID:</b>
+    <%=h @user.id %>
+  </p>
+  <p>
+    <b>PIN:</b>
+    <%= @user.pin %>
+  </p>
+</fieldset>
 
 <h2>Messages</h2>
 
